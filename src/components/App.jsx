@@ -10,8 +10,13 @@ const [bad,setBad] = useState(0)
 
 const handleaddFedback = useCallback(e => {
   const keys = e.target.name;
-  
-  
+  if (keys==='good') {
+    setGood(prev=>prev+1)
+  }else if (keys==='neutral') {
+    setNeutral(prev=>prev+1)
+  }else{
+setBad(prev=>prev+1)
+  }
 },[])
 
 const countTotalFeedback = good+neutral+bad

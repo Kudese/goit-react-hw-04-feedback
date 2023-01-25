@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import FeedbackOptions from './Feedback/LeaveFeedback/FeedbackOptions';
+import {FeedbackOptions} from './Feedback/LeaveFeedback/FeedbackOptions';
 import Statistic from './Feedback/Statistic/Statistic';
 import Section from './Feedback/Section/Section';
 import { useCallback } from 'react';

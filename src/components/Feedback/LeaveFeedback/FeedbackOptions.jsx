@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 import s from '../LeaveFeedback/LeaveFeedback.module.css';
-export default function LeaveFeeedback({ state, onAddFedback }) {
+export  const FeedbackOptions = memo(({ state, onAddFedback })=> {
   return (
     <div className={s.container}>
       {Object.keys(state).map(el => {
@@ -18,8 +19,8 @@ export default function LeaveFeeedback({ state, onAddFedback }) {
       })}
     </div>
   );
-}
-LeaveFeeedback.propTypes = {
+})
+FeedbackOptions.propTypes = {
   onAddFedback: PropTypes.func.isRequired,
   state: PropTypes.exact({
     good: PropTypes.number.isRequired,

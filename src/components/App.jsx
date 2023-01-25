@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import FeedbackOptions from './Feedback/LeaveFeedback/FeedbackOptions';
 import Statistic from './Feedback/Statistic/Statistic';
 import Section from './Feedback/Section/Section';
@@ -14,7 +14,7 @@ const handleaddFedback = e => {
   });
 };
 const countTotalFeedback = good+neutral+bad
-const countPositiveFeedbackPercentage = ( Math.round((good * 100) / countTotalFeedback);
+const countPositiveFeedbackPercentage = ( Math.round((good * 100) / countTotalFeedback))
 
 return (
   <div>
@@ -35,17 +35,4 @@ return (
     </Section>
   </div>
 );
-}
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
- 
- 
-
-  render() {
-    const { good, neutral, bad } = this.state;
-    
-  }
 }
